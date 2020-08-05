@@ -1,5 +1,6 @@
 <template>
   <div>
+    <FuneralSearcher />
     <div class="google-map" ref="googleMap"></div>
     <template v-if="Boolean(this.google) && Boolean(this.map)">
       <slot :google="google" :map="map" />
@@ -9,6 +10,7 @@
 
 <script>
 import GoogleMapsApiLoader from "google-maps-api-loader";
+import FuneralSearcher from "@/components/FuneralSearcher";
 
 export default {
   props: {
@@ -21,6 +23,10 @@ export default {
       google: null,
       map: null,
     };
+  },
+
+  components: {
+    FuneralSearcher
   },
 
   async mounted() {

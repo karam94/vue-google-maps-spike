@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import GoogleMapLoader from "./GoogleMapLoader";
-import GoogleMapMarker from "./GoogleMapMarker";
+import GoogleMapLoader from "@/components/GoogleMapLoader";
+import GoogleMapMarker from "@/components/GoogleMapMarker";
 
 import { mapSettings } from "@/constants/mapSettings";
 
 export default {
   components: {
     GoogleMapLoader,
-    GoogleMapMarker,
+    GoogleMapMarker
   },
 
   data() {
@@ -29,17 +29,17 @@ export default {
       markers: [
         {
           id: "AND Kilburn Office",
-          position: { lat: -34.771940, lng: 138.618950 },
+          position: { lat: -34.77194, lng: 138.61895 },
         },
         {
           id: "Co-op One Angel Square",
-          position: { lat: 53.487690, lng: -2.237120 },
+          position: { lat: 53.48769, lng: -2.23712 },
         },
         {
           id: "AND Murray Office",
           position: { lat: 53.7934982, lng: -1.5578858 },
-        }
-      ]
+        },
+      ],
     };
   },
 
