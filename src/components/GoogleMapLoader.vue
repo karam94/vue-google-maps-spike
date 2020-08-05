@@ -2,6 +2,8 @@
   <div>
     <FuneralSearcher />
     <div class="google-map" ref="googleMap"></div>
+
+    <!-- If we have map markers/slot children components -->
     <template v-if="Boolean(this.google) && Boolean(this.map)">
       <slot :google="google" :map="map" />
     </template>
@@ -26,7 +28,7 @@ export default {
   },
 
   components: {
-    FuneralSearcher
+    FuneralSearcher,
   },
 
   async mounted() {
