@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FuneralSearcher />
+    <FuneralSearcher :funeralCenters="funeralCenters" />
     <div class="google-map" ref="googleMap"></div>
 
     <!-- If we have map markers/slot children components -->
@@ -18,6 +18,7 @@ export default {
   props: {
     mapConfig: Object,
     apiKey: String,
+    funeralCenters: Array
   },
 
   data() {

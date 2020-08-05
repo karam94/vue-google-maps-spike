@@ -1,5 +1,5 @@
 <template>
-  <GoogleMapLoader :mapConfig="mapConfig" apiKey="">
+  <GoogleMapLoader :mapConfig="mapConfig" apiKey="" :funeralCenters="markers">
     <template slot-scope="{ google, map }">
       <GoogleMapMarker
         v-for="marker in markers"
@@ -21,7 +21,7 @@ import { mapSettings } from "@/constants/mapSettings";
 export default {
   components: {
     GoogleMapLoader,
-    GoogleMapMarker
+    GoogleMapMarker,
   },
 
   data() {
@@ -29,15 +29,23 @@ export default {
       markers: [
         {
           id: "AND Kilburn Office",
-          position: { lat: -34.77194, lng: 138.61895 },
+          phone: "123 456 789",
+          position: { lat: 53.477459, lng: -2.242979 },
         },
         {
           id: "Co-op One Angel Square",
+          phone: "123 456 456",
           position: { lat: 53.48769, lng: -2.23712 },
         },
         {
           id: "AND Murray Office",
+          phone: "123 456 123",
           position: { lat: 53.7934982, lng: -1.5578858 },
+        },
+        {
+          id: "My local Co-op",
+          phone: "123 123 123",
+          position: { lat: 53.72672, lng: -2.5151 },
         },
       ],
     };
